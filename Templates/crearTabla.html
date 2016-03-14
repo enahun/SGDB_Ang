@@ -1,0 +1,55 @@
+﻿<div ng-init="init()">
+    <h3>Formulario Para Crear Tablas</h3>
+    <input type="button" class="btn btn-success"  value="cargar DB" ng-click="getDataBases()"/>
+    <input type="button" name="name" value="print" ng-click="print()"/>
+    <div class="col-md-3">
+        <select name="repeatSelect" id="repeatSelect" ng-model="baseDatos" class="form-control">
+            <option ng-repeat="option in data" value="{{option}}">{{option}}</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <input type="button" class="form-control btn btn-primary" value="Agregar Columna" ng-click="agregarFila()" />
+    </div>
+    
+    <br />
+    <br/>
+    <input type="text" name="name" placeholder="nombre table" ng-model="nombreTabla"/>
+    <input type="button" name="name" value="Crear Tabla" ng-click="crearTabla()" />
+    
+    <br />
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>PK</td>
+                    <td>Nombre</td>
+                    <td>Tipo</td>
+                    <td>Tamano</td>
+                    <td>Null</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in camposTabla">
+                    <td><input type="checkbox" name="name"  ng-model="row[0]" /></td>
+                    <td><input type="text" class="form-control"  ng-model="row[1]" /></td>
+                    
+                    <td>
+                        <select class="form-control" ng-model="row[2]">
+                            <option  ng-repeat="tipo in datatypes" value="{{tipo}}">{{tipo}}</option>
+                        </select>
+                    </td>
+                    <td><input type="text" class="form-control" value=" " ng-model="row[3]" /></td>
+                    <td><input type="checkbox" name="name" value=" " ng-model="row[4]" /> </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        
+
+
+
+    </div>
+
+
+</div>

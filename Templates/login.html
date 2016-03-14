@@ -1,0 +1,42 @@
+﻿<div class="container" ng-controller="mainController">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-7">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <span class=""></span>Login
+                </div>
+                <div class="panel-body">
+                    <form role="form" ng-submit="login()">
+                    <div class="form-group">
+                        <label for="usuario" class="col-sm-3 control-label">
+                            Usuario:
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" placeholder="Ingrese usuario" ng-model="usuario" required />
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">
+                            Contraseña:
+                        </label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" placeholder="Ingrese contraseña" ng-model="password" required />
+                        </div>
+                    </div>
+
+                    <br /><br />
+                    <div class="form-group last">
+                        <div class="col-sm-offset-1 col-sm-9 text_center">
+                            <input type="submit" class="btn btn-primary" value="Conectar" />
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="panel-footer text_center">
+                    <h4>Proyecto Sistema Gestor de Base de datos</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
